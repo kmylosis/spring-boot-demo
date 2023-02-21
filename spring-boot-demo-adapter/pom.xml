@@ -19,6 +19,11 @@
       <groupId>com.kmylosis</groupId>
       <artifactId>spring-boot-demo-core</artifactId>
     </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
   </dependencies>
 
 </project>
