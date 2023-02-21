@@ -9,7 +9,5 @@
   </parent>
 
   <artifactId>spring-boot-demo-database-migration</artifactId>
-  <version>${revision}</version>
-  <name>spring-boot-database-migration</name>
 
 </project>

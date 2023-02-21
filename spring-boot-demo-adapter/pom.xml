@@ -9,7 +9,16 @@
   </parent>
 
   <artifactId>spring-boot-demo-adapter</artifactId>
-  <version>${revision}</version>
-  <name>spring-boot-demo-adapter</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.kmylosis</groupId>
+      <artifactId>spring-boot-demo-adapter-rest-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.kmylosis</groupId>
+      <artifactId>spring-boot-demo-core</artifactId>
+    </dependency>
+  </dependencies>
 
 </project>

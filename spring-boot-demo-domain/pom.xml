@@ -9,7 +9,5 @@
   </parent>
 
   <artifactId>spring-boot-demo-domain</artifactId>
-  <version>${revision}</version>
-  <name>spring-boot-domain</name>
 
 </project>

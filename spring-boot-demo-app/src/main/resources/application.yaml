@@ -1,0 +1,11 @@
+server:
+  port: 12070
+  servlet:
+    context-path: /${spring.application.name}/
+  forward-headers-strategy: native
+
+spring:
+  application:
+    name: spring-boot-demo
+  main:
+    banner-mode: off

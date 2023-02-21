@@ -9,24 +9,28 @@
   </parent>
 
   <artifactId>spring-boot-demo-app</artifactId>
-  <version>${revision}</version>
-  <name>spring-boot-demo-app</name>
 
   <dependencies>
     <dependency>
+      <groupId>com.kmylosis</groupId>
+      <artifactId>spring-boot-demo-adapter</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.kmylosis</groupId>
+      <artifactId>spring-boot-demo-core</artifactId>
+    </dependency>
+    <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
   </dependencies>
 
   <build>
-    <pluginManagement>
       <plugins>
         <plugin>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
         </plugin>
       </plugins>
-    </pluginManagement>
   </build>
 </project>
