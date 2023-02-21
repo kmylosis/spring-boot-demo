@@ -1,4 +1,4 @@
-package com.kmylosis.springboot.demo;
+package com.kmylosis.springboot.demo.domain;
 
 import java.math.BigInteger;
 import java.time.LocalDate;
