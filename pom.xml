@@ -33,6 +33,7 @@
     <springboot.version>3.0.2</springboot.version>
     <java.version>18</java.version>
     <lombok.version>1.18.24</lombok.version>
+    <postgres.version>42.5.0</postgres.version>
   </properties>
 
   <dependencyManagement>
@@ -94,6 +95,20 @@
               <enabled>false</enabled>
             </layers>
           </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.liquibase</groupId>
+          <artifactId>liquibase-maven-plugin</artifactId>
+          <configuration>
+            <propertyFile>src/main/resources/liquibase/liquibase.properties</propertyFile>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.postgresql</groupId>
+              <artifactId>postgresql</artifactId>
+              <version>${postgres.version}</version>
+            </dependency>
+          </dependencies>
         </plugin>
       </plugins>
     </pluginManagement>

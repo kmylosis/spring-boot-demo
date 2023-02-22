@@ -10,4 +10,12 @@
 
   <artifactId>spring-boot-demo-database-migration</artifactId>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.liquibase</groupId>
+        <artifactId>liquibase-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
 </project>
