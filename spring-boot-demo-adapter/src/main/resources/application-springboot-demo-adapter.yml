@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    jdbc-url: jdbc:postgresql://host.docker.internal:5432/person_db
+    driver-class-name: org.postgresql.Driver
+    password: postgres
+    username: postgres
+    #Connection pooling
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
