@@ -1,15 +1,17 @@
 package com.kmylosis.springboot.demo.adapter.mappers;
 
-import com.kmylosis.springboot.demo.adapter.dto.PersonDTO;
+import com.kmylosis.springboot.demo.contracts.PersonDTO;
 import com.kmylosis.springboot.demo.adapter.outbound.repository.entities.PersonE;
 import com.kmylosis.springboot.demo.domain.Person;
 import java.util.Objects;
-import org.springframework.stereotype.Component;
 
-@Component
 public class PersonMapper {
 
-  public Person dtoToDomain(PersonDTO personDTO) {
+  private PersonMapper() {
+    throw new IllegalStateException("Mapping class");
+  }
+
+  public static Person dtoToDomain(PersonDTO personDTO) {
     if (Objects.isNull(personDTO)) {
       return null;
     }
@@ -21,7 +23,7 @@ public class PersonMapper {
     return person;
   }
 
-  public PersonDTO domainToDTO(Person person) {
+  public static PersonDTO domainToDTO(Person person) {
     if (Objects.isNull(person)) {
       return null;
     }
@@ -33,7 +35,7 @@ public class PersonMapper {
     return personDTO;
   }
 
-  public PersonE domainToEntity(Person person) {
+  public static PersonE domainToEntity(Person person) {
     if (Objects.isNull(person)) {
       return null;
     }
@@ -45,7 +47,7 @@ public class PersonMapper {
     return personE;
   }
 
-  public Person entityToDomain(PersonE personE) {
+  public static Person entityToDomain(PersonE personE) {
     if (Objects.isNull(personE)) {
       return null;
     }
