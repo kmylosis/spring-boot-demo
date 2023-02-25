@@ -13,24 +13,24 @@ import lombok.RequiredArgsConstructor;
 @Data
 @RequiredArgsConstructor
 @Entity
-@Table(name = "PERSON")
+@Table(name = "PEOPLE")
 public class PersonE {
 
   @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE)
-  @Column(name = "sid")
+  @Column(name = "SID")
   private Long sid;
 
-  @Column(name = "first_name")
+  @Column(name = "FIRST_NAME")
   private String firstName;
 
-  @Column(name = "last_name", nullable = false)
+  @Column(name = "LAST_NAME", nullable = false)
   private String lastName;
 
-  @Column(name = "date_of_birth", nullable = false)
+  @Column(name = "DATE_OF_BIRTH", nullable = false)
   private LocalDate dateOfBirth;
 
-  @Column(name = "identification", nullable = false, unique = true)
+  @Column(name = "IDENTIFICATION", nullable = false, unique = true)
   private String identification;
 
 }
