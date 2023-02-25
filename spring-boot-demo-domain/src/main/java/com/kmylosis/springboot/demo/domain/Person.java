@@ -1,6 +1,5 @@
 package com.kmylosis.springboot.demo.domain;
 
-import java.math.BigInteger;
 import java.time.LocalDate;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -15,6 +14,6 @@ public class Person {
 
   private LocalDate dateOfBirth;
 
-  private BigInteger identification;
+  private String identification;
 
 }

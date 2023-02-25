@@ -6,7 +6,6 @@ import com.kmylosis.springboot.demo.adapter.mappers.PersonMapper;
 import com.kmylosis.springboot.demo.adapter.rest.api.inbound.v1.PersonApi;
 import com.kmylosis.springboot.demo.contracts.PersonDTO;
 import com.kmylosis.springboot.demo.core.port.inbound.service.PersonService;
-import java.math.BigInteger;
 import java.time.LocalDate;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,11 +31,11 @@ public class PersonController implements PersonApi {
 
   @GetMapping(path = "/retrieve/{identification}", produces = APPLICATION_JSON_VALUE)
   @Override
-  public ResponseEntity<PersonDTO> findPersonByIdentification(BigInteger identification) {
+  public ResponseEntity<PersonDTO> findPersonByIdentification(String identification) {
     return ResponseEntity.ok(PersonMapper.domainToDTO(personService.findByIdentification(identification)));
   }
 
   private PersonDTO createPersonDTO() {
-    return new PersonDTO("Kostas", "Mylosis", LocalDate.now(), BigInteger.valueOf(123456));
+    return new PersonDTO("Kostas", "Mylosis", LocalDate.now(), "123456");
   }
 }

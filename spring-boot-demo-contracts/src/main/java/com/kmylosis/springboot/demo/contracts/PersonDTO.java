@@ -1,6 +1,5 @@
 package com.kmylosis.springboot.demo.contracts;
 
-import java.math.BigInteger;
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -12,9 +11,9 @@ public class PersonDTO {
 
   private LocalDate dateOfBirth;
 
-  private BigInteger identification;
+  private String identification;
 
-  public PersonDTO(String firstName, String lastName, LocalDate dateOfBirth, BigInteger identification) {
+  public PersonDTO(String firstName, String lastName, LocalDate dateOfBirth, String identification) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.dateOfBirth = dateOfBirth;
@@ -40,7 +39,7 @@ public class PersonDTO {
     return this.dateOfBirth;
   }
 
-  public BigInteger getIdentification() {
+  public String getIdentification() {
     return this.identification;
   }
 
@@ -56,7 +55,7 @@ public class PersonDTO {
     this.dateOfBirth = dateOfBirth;
   }
 
-  public void setIdentification(BigInteger identification) {
+  public void setIdentification(String identification) {
     this.identification = identification;
   }
 
@@ -70,8 +69,7 @@ public class PersonDTO {
     }
     PersonDTO personDTO = (PersonDTO) o;
     return getFirstName().equals(personDTO.getFirstName()) && getLastName().equals(personDTO.getLastName()) && getDateOfBirth().equals(
-            personDTO.getDateOfBirth())
-            && getIdentification().equals(personDTO.getIdentification());
+            personDTO.getDateOfBirth()) && getIdentification().equals(personDTO.getIdentification());
   }
 
   @Override
@@ -89,7 +87,7 @@ public class PersonDTO {
     private String firstName;
     private String lastName;
     private LocalDate dateOfBirth;
-    private BigInteger identification;
+    private String identification;
 
     PersonDTOBuilder() {
     }
@@ -109,7 +107,7 @@ public class PersonDTO {
       return this;
     }
 
-    public PersonDTOBuilder withIdentification(BigInteger identification) {
+    public PersonDTOBuilder withIdentification(String identification) {
       this.identification = identification;
       return this;
     }
@@ -120,8 +118,7 @@ public class PersonDTO {
 
     public String toString() {
       return "PersonDTO.PersonDTOBuilder(firstName=" + this.firstName + ", lastName=" + this.lastName + ", dateOfBirth=" + this.dateOfBirth
-              + ", identification="
-              + this.identification + ")";
+              + ", identification=" + this.identification + ")";
     }
   }
 }

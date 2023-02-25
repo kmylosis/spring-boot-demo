@@ -6,7 +6,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import java.math.BigInteger;
 import java.time.LocalDate;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -25,13 +24,13 @@ public class PersonE {
   @Column(name = "first_name")
   private String firstName;
 
-  @Column(name = "last_name")
+  @Column(name = "last_name", nullable = false)
   private String lastName;
 
-  @Column(name = "date_of_birth")
+  @Column(name = "date_of_birth", nullable = false)
   private LocalDate dateOfBirth;
 
-  @Column(name = "identification")
-  private BigInteger identification;
+  @Column(name = "identification", nullable = false, unique = true)
+  private String identification;
 
 }

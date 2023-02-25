@@ -3,7 +3,6 @@ package com.kmylosis.springboot.demo.adapter.outbound.repository;
 import com.kmylosis.springboot.demo.adapter.mappers.PersonMapper;
 import com.kmylosis.springboot.demo.core.port.outbound.PersonRepository;
 import com.kmylosis.springboot.demo.domain.Person;
-import java.math.BigInteger;
 import java.util.Objects;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +23,7 @@ public class PersonRepositoryImpl implements PersonRepository {
   }
 
   @Override
-  public Person findByIdentification(BigInteger identification) {
+  public Person findByIdentification(String identification) {
     return PersonMapper.entityToDomain(personEntityRepository.findByIdentification(identification).stream().findFirst().orElse(null));
   }
 }
